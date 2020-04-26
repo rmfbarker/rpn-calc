@@ -1,25 +1,16 @@
-#RPN calculator
+# RPN calculator
 
-##Build and run
+## Build and run
 
-Gradle is required
+Thre application includes a gradlew script which will pull the correct version of gradle and build the jar file.
 
     $ ./gradlew build
-    $ java -cp 
+    $ java -cp build/libs/rpn-calc.jar rpn.calc.App
 
 
-******
-The following are the instructions that were provided:
+## Notes 
 
-
-RPN calculator
---------------
-
-Some of the best calculators in the world have an 'RPN' (reverse polish notation) mode.
-
-We would like you to write a command-line based RPN calculator.
-
-Requirements:
+This project implements a command-line based RPN calculator.
 
 The calculator has a stack that can contain real numbers.
 
@@ -52,89 +43,75 @@ operator <operator> (position: <pos>): insufficient parameters
 After displaying the warning, all further processing of the string terminates and the current
 state of the stack is displayed.
 
-Deliverables
 
-- The solution submitted should include structure, source code, configuration and any
-tests or test code you deem necessary - no need to package class files.
-
-- Solve the problem using Java.
-- Solve the problem as though it were "production level" code.
-
-It is not required to provide any graphical interface.
-
-In order to get around firewall issues we recommend the solution
-be packaged as a password protected zip file.
-
-
-examples:
+## Examples
 
 --------
 
-5 2
-stack: 5 2
+    5 2
+    stack: 5 2
 
 --------
 
-2 sqrt
-stack: 1.4142135623
-clear 9 sqrt
-stack: 3
+    2 sqrt
+    stack: 1.4142135623
+    clear 9 sqrt
+    stack: 3
 
 --------
 
-5 2 -
-stack: 3
-3 -
-stack: 0
-clear
-stack:
+    5 2 -
+    stack: 3
+    3 -
+    stack: 0
+    clear
+    stack:
 
 --------
 
-5 4 3 2
-stack: 5 4 3 2
-undo undo *
-stack: 20
-5 *
-stack: 100
-undo
-stack: 20
+    5 4 3 2
+    stack: 5 4 3 2
+    undo undo *
+    stack: 20
+    5 *
+    stack: 100
+    undo
+    stack: 20
 
 --------
 
-7 12 2 /
-stack: 7 6
-*
-stack: 42
-4 /
-stack: 10.5
+    7 12 2 /
+    stack: 7 6
+    *
+    stack: 42
+    4 /
+    stack: 10.5
 
 --------
 
-1 2 3 4 5
-stack: 1 2 3 4 5
-*
-stack: 1 2 3 20
-clear 3 4 -
-stack: -1
+    1 2 3 4 5
+    stack: 1 2 3 4 5
+    *
+    stack: 1 2 3 20
+    clear 3 4 -
+    stack: -1
 
 
 --------
 
-1 2 3 4 5
-stack: 1 2 3 4 5
-*
-stack: 1 2 3 20
-* * *
-stack: 120
+    1 2 3 4 5
+    stack: 1 2 3 4 5
+    *
+    stack: 1 2 3 20
+    * * *
+    stack: 120
 
 --------
 
-1 2 3 * 5 + * * 6 5
-operator * (position: 15): insufficient parameters
-stack: 11
-
-(the 6 and 5 were not pushed on to the stack due to the previous error)
+    1 2 3 * 5 + * * 6 5
+    operator * (position: 15): insufficient parameters
+    stack: 11
+    (the 6 and 5 were not pushed on to the stack due to the previous error)
 
 --------
 
