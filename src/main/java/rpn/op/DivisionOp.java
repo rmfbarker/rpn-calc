@@ -13,7 +13,6 @@ public class DivisionOp extends DualOperandOperator {
         return op2 / op1;
     }
 
-
     @Override
     public String getName() {
         return "/";
