@@ -19,7 +19,7 @@ separated lists of numbers and operators.
 
 Numbers are pushed on to the stack.  Operators operate on numbers that are on the stack.
 
-Available operators are +, -, *, /, sqrt, undo, clear
+Available operators are `+`, `-`, `*`, `/`, `sqrt`, `undo`, `clear`
 
 Operators pop their parameters off the stack, and push their results back onto the stack.
 
